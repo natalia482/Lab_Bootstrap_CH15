@@ -17,3 +17,29 @@ Recuerda: este archivo se enlaza DESPUÉS de Bootstrap.
 La paleta es tuya: colores cálidos de plaza de mercado.
 ============================================================
 */
+
+/*Fonts Google*/
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Erica+One&family=Gugi&family=Londrina+Shadow&family=Rubik+Spray+Paint&family=Stick+No+Bills:wght@200..800&family=Unica+One&family=WDXL+Lubrifont+JP+N&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Electrolize&family=Erica+One&family=Gugi&family=Londrina+Shadow&family=Rubik+Spray+Paint&family=Stick+No+Bills:wght@200..800&family=Unica+One&family=WDXL+Lubrifont+JP+N&display=swap');
+:root {
+  /* Hexadecimal (#D9531E) y RGB (217, 83, 30) alineados */
+  --bs-primary: #D9531E;
+  --bs-primary-rgb: 217, 83, 30;
+
+  /* Fuente cálida Nunito traída de Google Fonts */
+  --bs-body-font-family: 'Nunito', sans-serif;
+}
+
+/* Personalización del botón principal de Bootstrap */
+.btn-primary {
+  --bs-btn-bg: #D9531E;
+  --bs-btn-border-color: #D9531E;
+  --bs-btn-hover-bg: #B83F12;
+  --bs-btn-hover-border-color: #B83F12;
+}
+
+
+.hero-img {
+  max-height: 450px;
+  object-fit: cover;
+}

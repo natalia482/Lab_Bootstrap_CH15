@@ -27,3 +27,181 @@ Ejercicio 08 · La letra
   - El mismo <link> de Google Fonts que en index.html.
 ============================================================
 -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto y Pedidos · Sabores de la Plaza</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Ejercicio 02 -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="index.html">
+        Sabores de la Plaza
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="puestos.html">Puestos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contáctenos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado de la página -->
+  <header class="bg-light py-4 border-bottom mb-5 text-center">
+    <div class="container">
+      <h1 class="h2 fw-bold mb-2">Contacto y Pedidos</h1>
+      <p class="text-muted mb-0">¿Tienes dudas o quieres hacer un pedido directo a nuestros puestos? Déjanos un mensaje.</p>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    
+    <!-- Ejercicio 06 -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow-sm border-0 p-4">
+          <form>
+            
+            <div class="mb-3">
+              <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. María Gómez" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="contacto" class="form-label fw-semibold">Teléfono o correo electrónico</label>
+              <input type="email" class="form-control" id="contacto" name="contacto" placeholder="ejemplo@correo.com o 3001234567" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="puesto" class="form-label fw-semibold">Puesto o consulta</label>
+              <select class="form-select" id="puesto" name="puesto" required>
+                <option value="" selected disabled>Selecciona un puesto</option>
+                <option value="puesto-1">Puesto 1: Frutas y Verduras</option>
+                <option value="puesto-2">Puesto 2: Panadería y Cafetería</option>
+                <option value="puesto-3">Puesto 3: Gastronomía y Almuerzos</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="mensaje" class="form-label fw-semibold">Mensaje o detalle del pedido</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="4" maxlength="500" placeholder="Escribe aquí tu consulta o los productos que deseas pedir..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">Enviar mensaje</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ejercicio 07 -->
+    <section class="row justify-content-center mb-5">
+      <div class="col-12 col-md-10 col-lg-8">
+        <h2 class="h4 text-center fw-bold mb-4">Preguntas Frecuentes</h2>
+        
+        <div class="accordion shadow-sm" id="accordionFAQ">
+          
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                ¿Cuáles son los horarios de atención de la plaza?
+              </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Atendemos de lunes a domingo desde las 6:00 a.m. hasta las 4:00 p.m. Los días festivos contamos con horario especial de 6:00 a.m. a 2:00 p.m.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                ¿Hacen envíos a domicilio?
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                ¡Sí! Varios de nuestros puestos cuentan con servicio domiciliario local. Puedes solicitar el envío detallando tu pedido en el formulario de arriba.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                ¿Qué medios de pago aceptan en los puestos?
+              </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                Aceptamos pago en efectivo, transferencias bancarias (Nequi, Daviplata) y tarjetas de débito/crédito en la mayoría de los módulos.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Ejercicio 07-->
+        <div class="text-center mt-4">
+          <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modalTerminos">
+            Ver políticas de domicilio y pedidos
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Ejercicio 07 -->
+  <div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminosLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="modalTerminosLabel">Políticas de Domicilios</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-content-body p-3">
+          <p class="small text-muted mb-0">Los pedidos realizados mediante la web son procesados directamente por cada comerciante. El tiempo de entrega promedio oscila entre 30 y 50 minutos según el sector.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Entendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white text-center py-4 mt-auto">
+    <div class="container">
+      <p class="fw-bold mb-1">Sabores de la Plaza</p>
+      <p class="small mb-1">Ubicados en la Plaza Principal de Mercado</p>
+      <p class="small text-white-50 mb-0">Contacto: info@saboresdelaplaza.com | Tel: (601) 555-0199</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
